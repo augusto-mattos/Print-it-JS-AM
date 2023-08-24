@@ -130,16 +130,16 @@ header {
 /* #banner .arrow { POUR LE MOMENT, CE SELECTEUR NE FAIT PAS DE CHANGEMENT SUR LA PAGE
 	position: absolute;
 }*/
-#banner .arrow_left, 
-#banner .arrow_right {
+#banner #arrow_left, /* Le class arrow left et right sont devenues des id */ 
+#banner #arrow_right {
 	position: absolute;
 	border: none;
 	background: none;
 }
-#banner .arrow_left { 
+#banner #arrow_left { 
 	left: 10px;
 }
-#banner .arrow_right {
+#banner #arrow_right {
 	right: 10px;
 }
 /* Gestion des points du carrousel */
