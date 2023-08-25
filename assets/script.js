@@ -43,18 +43,29 @@ dotElement.className = "dot";
 divDots.appendChild(dotElement); // Les dots sont rattachés directement à l'intérieur de la div dots
 }
 
+const arrowLeft = document.createElement("button"); // création du btn avec la flèche gauche avec un id
+arrowLeft.id = "arrow_left";
+const btnArrowLeft = document.createElement("img") // définition de l'img qui va dans le bouton
+btnArrowLeft.src = "/assets/images/arrow_left.png";
+arrowLeft.appendChild(btnArrowLeft); // rattachement de l'image dans le bouton 
+arrowLeft.addEventListener("click", () => { // evenements sur les flèches qui devront permettre de passer à la slide précédente ou suivante
+	console.log("ça fonctionne à gauche");
+})
+
+const arrowRight = document.createElement("button");
+arrowRight.id = "arrow_right";
+const btnArrowRight = document.createElement("img")
+btnArrowRight.src = "/assets/images/arrow_right.png";
+arrowRight.appendChild(btnArrowRight); // rattachement de l'image dans le bouton 
+arrowRight.addEventListener("click", () => { // evenements sur les flèches qui devront permettre de passer à la slide précédente ou suivante
+	console.log("ça fonctionne à droite");
+})
+
+
 // Rattachement des éléments générés à la balise #banner
 const divBanner = document.querySelector("#banner");
 divBanner.appendChild(imageSlide);
 divBanner.appendChild(tagLine);
 divBanner.appendChild(divDots);
-
-let arrowLeft = document.getElementById("arrow_left"); // evenements sur les flèches qui devront permettre de passer à la slide précédente ou suivante
-arrowLeft.addEventListener("click", () => {
-	console.log("ça fonctionne à gauche");
-})
-
-let arrowRight = document.getElementById("arrow_right");
-arrowRight.addEventListener("click", () => {
-	console.log("ça fonctionne à droite");
-})
+divBanner.appendChild(arrowLeft);
+divBanner.appendChild(arrowRight);
