@@ -26,6 +26,7 @@ const banner = slides[0];
 const imageSlide = document.createElement("img"); 
 imageSlide.className = "banner-img"; // insertion de la class dans la div img
 imageSlide.src = banner.image; // indication de la source = l'img vient de l'array qui se trouve dans la constante slides
+imageSlide.alt = "Banner Print-it";
 
 const tagLine = document.createElement("p"); 
 tagLine.innerText = banner.tagLine;
