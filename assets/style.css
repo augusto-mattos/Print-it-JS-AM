@@ -38,8 +38,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-family: Roboto, sans-serif; /* JE RAJOUTE UN FONT-FAMILY AU BODY POUR ETRE SUR QUE TOUTE LA PAGE AURA LA MEME TYPO, SAUF DANS LES CAS OU IL Y AURA UNE DECLARATION QUI LA MODIFIE */ 
-
+	font-family: Roboto, sans-serif; 
 }
 ol, ul {
 	list-style: none;
@@ -55,14 +54,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* 	CE SELECTEUR EST VIDE. A SUPPRIMER
-body { 
-
-} */
 section {
 	margin-block: 6em;
 }
-h2, h3, #banner p { /* CREATION D'UN SELECTEUR QUE POUR INDIQUER CE CHANGEMENT DE TYPOGRAPHIE */
+h2, h3, #banner p { 
 	font-family: 'Roboto Slab', sans-serif; 
 }
 h2 {
@@ -76,7 +71,7 @@ h3{
 	margin-block: 1em;
 }
 
-p, li { /* LA DECLARATION DE TYPOGRAPHIE EST PASSEE AU BODY */
+p, li {
 	font-size: 16px;
 	line-height: 26px;
 }
@@ -127,19 +122,16 @@ header {
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
 
-/* #banner .arrow { POUR LE MOMENT, CE SELECTEUR NE FAIT PAS DE CHANGEMENT SUR LA PAGE
-	position: absolute;
-}*/
-#banner .arrow_left, 
-#banner .arrow_right {
+#banner #arrow_left, /* Le class arrow left et right sont devenues des id */ 
+#banner #arrow_right {
 	position: absolute;
 	border: none;
 	background: none;
 }
-#banner .arrow_left { 
+#banner #arrow_left { 
 	left: 10px;
 }
-#banner .arrow_right {
+#banner #arrow_right {
 	right: 10px;
 }
 /* Gestion des points du carrousel */
