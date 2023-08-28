@@ -78,9 +78,14 @@ btnArrowRight.src = "./assets/images/arrow_right.png";
 arrowRight.appendChild(btnArrowRight); // rattachement de l'image dans le bouton
 arrowRight.addEventListener("click", () => {
   // evenements sur les flèches qui devront permettre de passer à la slide précédente ou suivante
-  currentSlide = (currentSlide + 1) % slides.length;
+  currentSlide = (currentSlide + 1) % slides.length; // currentSlide + 1 fait passer au prochain slide. Le calcul avec le pourcentage fait que si on est à la dernière image, le clic mène au premier slide ( 3 + 1 / 4 ) 
   updateSlide();
 });
+
+const interval = setInterval(() => { // définition d'un lapse de temps pour le défilement automatique de diapo
+  currentSlide = (currentSlide + 1) % slides.length; // copie du calcul appliqué au bouton arrowRight
+  updateSlide();
+}, 6000); // temps en milisecondes 
 
 function updateSlide() {
   const dots = document.querySelectorAll(".dot"); // selection des éléments avec la classe dot
@@ -92,6 +97,7 @@ function updateSlide() {
   spanElement.innerText = slides[currentSlide].tagLineSpan;
 
   tagLine.appendChild(spanElement);
+
 }
 
 // Rattachement des éléments générés à la balise #banner
