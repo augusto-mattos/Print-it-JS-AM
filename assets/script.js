@@ -1,21 +1,21 @@
 const slides = [
   {
-    image: "/assets/images/slideshow/slide1.jpg",
+    image: "./assets/images/slideshow/slide1.jpg",
     tagLine: "Impressions tous formats", // Le p TagLine a été séparé en deux pour la création du span tagLineSpan ci-dessous
     tagLineSpan: "en boutique et en ligne",
   },
   {
-    image: "/assets/images/slideshow/slide2.jpg",
+    image: "./assets/images/slideshow/slide2.jpg",
     tagLine: "Tirages haute définition grand format",
     tagLineSpan: "pour vos bureaux et events",
   },
   {
-    image: "/assets/images/slideshow/slide3.jpg",
+    image: "./assets/images/slideshow/slide3.jpg",
     tagLine: "Grand choix de couleurs",
     tagLineSpan: "de CMJN aux pantones",
   },
   {
-    image: "/assets/images/slideshow/slide4.png",
+    image: "./assets/images/slideshow/slide4.png",
     tagLine: "Autocollants",
     tagLineSpan: "avec découpe laser sur mesure",
   },
@@ -62,7 +62,7 @@ const arrowLeft = document.createElement("button"); // création du btn avec la 
 arrowLeft.id = "arrow_left";
 
 const btnArrowLeft = document.createElement("img"); // définition de l'img qui va dans le bouton
-btnArrowLeft.src = "/assets/images/arrow_left.png";
+btnArrowLeft.src = "./assets/images/arrow_left.png";
 arrowLeft.appendChild(btnArrowLeft); // rattachement de l'image dans le bouton
 arrowLeft.addEventListener("click", () => {
   // evenements sur les flèches qui devront permettre de passer à la slide précédente ou suivante
@@ -74,7 +74,7 @@ const arrowRight = document.createElement("button");
 arrowRight.id = "arrow_right";
 
 const btnArrowRight = document.createElement("img");
-btnArrowRight.src = "/assets/images/arrow_right.png";
+btnArrowRight.src = "./assets/images/arrow_right.png";
 arrowRight.appendChild(btnArrowRight); // rattachement de l'image dans le bouton
 arrowRight.addEventListener("click", () => {
   // evenements sur les flèches qui devront permettre de passer à la slide précédente ou suivante
